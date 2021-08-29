@@ -7,12 +7,33 @@
     <title>Advance Js</title>
 </head>
 <body>
-    <h1>Template String</h1>
+    <h1>spread Operator</h1>
     <script>
-        var user = "Arun";
-        // console.log("Hello"+user) //old method
-        console.log(`Hello ${user}`) //new template String method
-        
+    //    var arr = [10,20,30,40,50]
+    //    console.log(arr)
+
+    //    var arr = [10,20,30,40,50]
+    //    console.log(...arr)
+
+    //    we can esly do concat by using spread operator
+
+    //  var arr = [10,20,30,40,50]
+    //  var arr1 = [44,22,]
+    //    console.log(...arr ,...arr1)
+    //    console.log(...arr1 ,...arr)
+    //    console.log(01,...arr1 ,...arr,09)
+
+    // we can easily concat 2 obj easaly
+
+    var obj1 ={
+        name:"Arun",
+        age:24
+    };
+    
+    var obj2 ={
+        collage:"RKGIT"
+    };
+    console.log({...obj1,...obj2});
     </script>
 </body>
 </html>
