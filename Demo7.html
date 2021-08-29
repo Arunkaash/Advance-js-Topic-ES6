@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js</title>
+</head>
+<body>
+    <h1> Promise</h1>
+    <script>
+        // var condition=true;
+        // let prom = new Promise(function(resolve,reject){
+        //     if(condition){
+        //         resolve("I am successFul")
+        //     }
+        //     else{
+        //         reject("I am failed")
+        //     }
+        // })
+        // console.log(prom);
+
+        // function prom(condition){ //put in function
+        //  return new Promise(function(resolve,reject){
+        //     if(condition){
+        //         resolve("I am successFul")
+        //     }
+        //     else{
+        //         reject("I am failed")
+        //     }
+        // })
+        // }
+        // console.log(prom(true));
+
+
+        
+        // putting condition in settimeout 
+        
+        function prom(condition){ //put in function
+         return new Promise(function(resolve,reject){
+            console.log("feching data")
+            setTimeout(() => {
+                if(condition){
+                resolve("I am successFul")
+            }
+            else{
+                reject("I am failed")
+            }
+            }, 2000);
+        })
+        }
+        let onfulfillment = (result)=>{
+            console.log(result)
+        }
+        
+        let onrejection = (error)=>{
+            console.log(error)
+        }
+
+        // prom(true).then(onfulfillment)
+        // prom(true).catch(onrejection)
+        prom(true).then(onfulfillment).catch(onrejection)
+    </script>
+</body>
+</html>

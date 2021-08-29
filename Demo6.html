@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs Js</title>
+</head>
+<body>
+    <h1 style="text-align: center;">OOP</h1>
+    <script>
+    // obj
+    //    class hello{ //class
+    //        message(){ // method
+    //            console.log("Hello user")
+    //        }
+    //    }
+    //    let a = new hello(); //creating obj of class hello
+    //    a.message();//calling method
+
+    // multiple method calling***************
+
+    //  class hello{ //class
+    //        message(){ // method
+    //            console.log("Hello user")
+    //        }
+    //        sorry(){ // method
+    //            console.log("Everyone Sorry")
+    //        }
+    //    }
+    //    let a = new hello(); //creating obj of class hello
+    //    a.message();//calling method
+    //    a.sorry();//calling method
+
+    // constructor*****************************
+
+    //     class hello{ //class
+    //        constructor(){
+    //            console.log("Constructor function") //automatically call
+    //        }
+    //    }
+    //    let a = new hello(); //creating obj of class hello
+       
+    //  class hello{ //class
+    //        constructor(){
+    //            name;
+    //            console.log("Constructor function") //automatically call
+    //        }
+    //        message(){ // method
+    //            console.log(`hello user ${this.name}`)
+    //        }
+    //    }
+    //    let a = new hello(); //creating obj of class hello
+    //    a.name= "Arun";
+    //    a.message();
+
+    //      class hello{ //class
+    //        constructor(name){
+    //          this.username = name;
+    //            console.log("Constructor function") //automatically call
+    //        }
+    //        message(){ // method
+    //            console.log(`hello user ${this.username}`)
+    //        }
+    //    }
+    //    let a = new hello("Arun"); //creating obj of class hello
+    //    a.message();
+       
+
+    // inheritance*************************
+
+    // class employee{
+    //     constructor(){
+    //         console.log("employee constructor")
+    //     }
+    // }
+
+    // class manager extends employee{
+
+    // }
+    // let a = new manager();
+
+
+    // class employee{
+    //     constructor(name){
+    //         console.log(`employee constructor ${name}`)
+    //     }
+    // }
+
+    // class manager extends employee{
+
+    // }
+    // let a = new manager("Arun");
+
+        
+    // class employee{
+    //     constructor(name){
+    //         this.empname = name
+    //         console.log(`employee constructor ${name}`)
+    //     }
+    //      info(){
+            
+    //         console.log(`employee name : ${this.empname}`)
+    //     }
+    // }
+
+    // class manager extends employee{
+
+    //     info(){
+    //         super.info()
+    //         console.log(`manager name : ${this.empname}`)
+    //     }
+    // }
+    // let a = new manager("Arun");
+    // a.info();
+
+     class employee{
+        constructor(name ,profile, sallery){
+            this.empname = name
+            this.empprofile = profile
+            this.empsallery = sallery
+            // console.log(`employee constructor ${name}`)
+        }
+         info(){
+            
+            console.log(`employee name : ${this.empname} profile : ${this.empprofile} sallery : ${ this.empsallery}`)
+        }
+    }
+
+    class manager extends employee{
+        constructor(mname,empprofile,msallery){
+            super()
+            this.empprofile= empprofile
+            this.mname= mname
+            this.msallery= msallery
+        }
+        info(){
+            
+            console.log(`manager name : ${this.mname} profile : ${this.empprofile} sallery : ${ this.msallery}`)
+        }
+
+        
+    }
+    let a = new employee("Arun","IT",40000);
+    let b = new manager("Ram","IT",60000);
+    a.info();
+    b.info();
+        
+    </script>
+</body>
+</html>
